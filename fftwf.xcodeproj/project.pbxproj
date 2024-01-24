@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -444,25 +444,8 @@
 		D44DEDA226114409008C4602 /* transpose.c in Sources */ = {isa = PBXBuildFile; fileRef = D41817782610C79500F510BB /* transpose.c */; };
 		D44DEDA326114409008C4602 /* trig.c in Sources */ = {isa = PBXBuildFile; fileRef = D41817862610C79500F510BB /* trig.c */; };
 		D44DEDA426114409008C4602 /* twiddle.c in Sources */ = {isa = PBXBuildFile; fileRef = D41817992610C79600F510BB /* twiddle.c */; };
-		D4DB5C072682C17D000DDF94 /* fftw3.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DB5C062682C17D000DDF94 /* fftw3.h */; };
+		D4DB5C072682C17D000DDF94 /* fftw3.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DB5C062682C17D000DDF94 /* fftw3.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D45120762A365EF600D8BE84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D45120712A365EF600D8BE84 /* fftw.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D44DE846261140AE008C4602;
-			remoteInfo = fftw;
-		};
-		D45120782A365EF600D8BE84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D45120712A365EF600D8BE84 /* fftw.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D4D9ABD929560FC100F9870C;
-			remoteInfo = test;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D418176B2610C79500F510BB /* minmax.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = minmax.c; sourceTree = "<group>"; };
@@ -924,7 +907,6 @@
 		D44DEA222611430A008C4602 /* fftwf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = fftwf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44DEA242611430A008C4602 /* fftwf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fftwf.h; sourceTree = "<group>"; };
 		D44DEA252611430A008C4602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D45120712A365EF600D8BE84 /* fftw.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = fftw.xcodeproj; sourceTree = "<group>"; };
 		D4DB5C062682C17D000DDF94 /* fftw3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fftw3.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -942,7 +924,6 @@
 		D41817572610C58C00F510BB = {
 			isa = PBXGroup;
 			children = (
-				D45120712A365EF600D8BE84 /* fftw.xcodeproj */,
 				D4181B312610CAD200F510BB /* config.h */,
 				D4DB5C062682C17D000DDF94 /* fftw3.h */,
 				D4181A832610CA4800F510BB /* api */,
@@ -1518,15 +1499,6 @@
 			path = fftwf;
 			sourceTree = "<group>";
 		};
-		D45120722A365EF600D8BE84 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D45120772A365EF600D8BE84 /* fftw.framework */,
-				D45120792A365EF600D8BE84 /* test */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1535,13 +1507,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44DEA262611430A008C4602 /* fftwf.h in Headers */,
+				D4DB5C072682C17D000DDF94 /* fftw3.h in Headers */,
 				D44DEC3E26114393008C4602 /* x77.h in Headers */,
 				D44DEA2B26114331008C4602 /* config.h in Headers */,
 				D44DEA2E26114331008C4602 /* plan-guru-dft-c2r.h in Headers */,
 				D44DEA2F26114331008C4602 /* plan-guru-dft-r2c.h in Headers */,
 				D44DEA3026114331008C4602 /* plan-guru-dft.h in Headers */,
 				D44DEA3526114331008C4602 /* guru.h in Headers */,
-				D4DB5C072682C17D000DDF94 /* fftw3.h in Headers */,
 				D44DEA3626114331008C4602 /* guru64.h in Headers */,
 				D44DEA3726114331008C4602 /* f77funcs.h in Headers */,
 				D44DEA3826114331008C4602 /* mktensor-iodims.h in Headers */,
@@ -1580,7 +1552,8 @@
 		D41817582610C58C00F510BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1420;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					D44DEA212611430A008C4602 = {
 						CreatedOnToolsVersion = 12.4;
@@ -1598,35 +1571,12 @@
 			mainGroup = D41817572610C58C00F510BB;
 			productRefGroup = D41817612610C58C00F510BB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D45120722A365EF600D8BE84 /* Products */;
-					ProjectRef = D45120712A365EF600D8BE84 /* fftw.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D44DEA212611430A008C4602 /* fftwf */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D45120772A365EF600D8BE84 /* fftw.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = fftw.framework;
-			remoteRef = D45120762A365EF600D8BE84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D45120792A365EF600D8BE84 /* test */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = test;
-			remoteRef = D45120782A365EF600D8BE84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D44DEA202611430A008C4602 /* Resources */ = {
@@ -2109,6 +2059,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2169,6 +2120,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -2187,7 +2139,7 @@
 		D44DEA282611430A008C4602 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2197,6 +2149,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = fftwf/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2204,7 +2157,13 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				OTHER_CFLAGS = (
+					"-DACCELERATE_LAPACK_ILP64",
+					"-DACCELERATE_NEW_LAPACK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.physyapps.fftwf;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2217,7 +2176,7 @@
 		D44DEA292611430A008C4602 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2227,6 +2186,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = fftwf/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2234,7 +2194,13 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				OTHER_CFLAGS = (
+					"-DACCELERATE_LAPACK_ILP64",
+					"-DACCELERATE_NEW_LAPACK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.physyapps.fftwf;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

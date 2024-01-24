@@ -6,7 +6,7 @@
 //
 
 #include <stdio.h>
-#include "fftw3.h"
+#include <fftw/fftw3.h>
 
 int main(int argc, const char * argv[]) {
     int length = 1024;
